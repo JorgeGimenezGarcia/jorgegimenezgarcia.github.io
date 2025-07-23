@@ -1,1 +1,0 @@
-# jorgegimenezgarcia.github.io
