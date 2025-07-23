@@ -1,90 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jorge Giménez García | Senior Data Engineer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7f9fb;
-      color: #333;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      border-radius: 10px;
-    }
-
-    h1 { margin-bottom: 0.2rem; }
-    h2 { margin-top: 2rem; color: #007ACC; }
-    a { color: #007ACC; text-decoration: none; }
-    ul { padding-left: 1.2rem; }
-
-    .icon-links a {
-      margin-right: 15px;
-      font-size: 1.3rem;
-    }
-
-    .tag {
-      background: #e3f2fd;
-      color: #007ACC;
-      padding: 0.3rem 0.6rem;
-      margin: 0.2rem;
-      display: inline-block;
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-
-    .section {
-      margin-bottom: 1.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Gimenez Garcia CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+        .sidebar {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .main-content {
+            flex: 2;
+            padding: 2.5rem;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ecf0f1;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .skill-badge {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.4rem;
+            transition: background-color 0.3s ease;
+        }
+        .skill-badge:hover {
+            background-color: #2980b9;
+        }
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid #3498db;
+        }
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+        .experience-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.15rem;
+        }
+        .experience-company {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info p {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .contact-info p svg {
+            fill: #ecf0f1;
+            width: 20px;
+            height: 20px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        ul li::before {
+            content: '•';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Jorge Giménez García</h1>
-    <p><strong>Senior Data Engineer</strong> — Madrid, Spain</p>
-    <div class="icon-links">
-      <a href="https://github.com/jorgegimenezgarcia" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/jorge-gimenez-garcia/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="assets/JorgeGiménezGarcía CV 2025" target="_blank"><i class="fas fa-file-pdf"></i> CV</a>
-    </div>
+    <div class="container">
+        <!-- Sidebar - Contact Information and Skills -->
+        <div class="sidebar">
+            <!-- Placeholder for profile picture -->
+            <img src="https://placehold.co/150x150/3498db/ffffff?text=JG" alt="Jorge Gimenez Garcia Profile Picture" class="profile-pic">
+            <h1 class="text-white text-3xl font-bold mb-2">JORGE GIMENEZ GARCIA</h1>
+            <p class="text-blue-300 text-lg mb-6">SENIOR DATA ENGINEER FOR BI & ANALYTICS</p>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>I'm a Senior Data Engineer with 4+ years of experience working with large-scale data platforms, building robust pipelines, and delivering high-impact analytics solutions. I specialize in <span class="tag">Snowflake</span>, <span class="tag">dbt</span>, <span class="tag">Airflow</span>, <span class="tag">Python</span>, and <span class="tag">Apache Kafka</span>.</p>
-    </div>
+            <div class="contact-info w-full mb-8">
+                <h2 class="section-title text-left">Contact</h2>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    gimenezgjorge@gmail.com
+                </p>
+                <p>
+                    <!-- LinkedIn Icon (simple SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://www.linkedin.com/in/jorge-gimenez-garcia/" target="_blank" class="text-white hover:underline">linkedin.com/in/jorge-gimenez-garcia/</a>
+                </p>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3c0 .55-.45 1-1 1C12.95 21 3 11.05 3 4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2z"/></svg>
+                    +34 630426707
+                </p>
+            </div>
 
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Data Pipeline Modernization (Sulzer):</strong> Migration of legacy workflows into modern dbt + Snowflake pipelines.</li>
-        <li><strong>Analytics Platform:</strong> Built internal data models for sales and marketing teams using dbt and Airflow orchestration.</li>
-      </ul>
-    </div>
+            <div class="skills w-full">
+                <h2 class="section-title text-left">Technical Skills</h2>
+                <div class="flex flex-wrap justify-center md:justify-start">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">C/C++</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">ETL Modeling</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">Kubernetes</span>
+                    <span class="skill-badge">Red Hat</span>
+                    <span class="skill-badge">MySQL</span>
+                    <span class="skill-badge">MariaDB</span>
+                    <span class="skill-badge">Oracle</span>
+                    <span class="skill-badge">MongoDB</span>
+                    <span class="skill-badge">Redis</span>
+                    <span class="skill-badge">Neo4j</span>
+                    <span class="skill-badge">AWS</span>
+                    <span class="skill-badge">Azure</span>
+                    <span class="skill-badge">Google Cloud</span>
+                    <span class="skill-badge">ElasticSearch</span>
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">Windows</span>
+                    <span class="skill-badge">Snowflake</span>
+                    <span class="skill-badge">Apache Kafka</span>
+                    <span class="skill-badge">Apache Airflow</span>
+                    <span class="skill-badge">dbt</span>
+                    <span class="skill-badge">SAP</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">Streamlit</span>
+                    <span class="skill-badge">HVR</span>
+                </div>
+                <p class="text-xs text-gray-300 mt-4 text-left">
+                    For a comprehensive list of skills and certifications, please visit my LinkedIn profile.
+                </p>
+            </div>
+            <div class="languages w-full mt-8">
+                <h2 class="section-title text-left">Languages</h2>
+                <ul class="text-left">
+                    <li>English (EOI)</li>
+                    <li>Spanish (Native)</li>
+                </ul>
+            </div>
+        </div>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <div>
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Snowflake</span>
-        <span class="tag">dbt</span>
-        <span class="tag">Airflow</span>
-        <span class="tag">Kafka</span>
-        <span class="tag">Spark</span>
-        <span class="tag">AWS</span>
-        <span class="tag">GCP</span>
-      </div>
+        <!-- Main Content - Summary and Experience -->
+        <div class="main-content">
+            <section class="summary mb-8">
+                <h2>Professional Profile</h2>
+                <p class="text-gray-700">
+                    I'm a Senior Data Engineer with over 4 years of experience designing and maintaining scalable cloud-native data platforms (Snowflake, Azure, AWS). I've led ETL/ELT migrations, built robust orchestration frameworks with Airflow and dbt, and ensured data quality and governance for critical projects at companies like Sulzer and Santander. Passionate about innovation, I continuously explore emerging technologies (Kafka, Spark, Kubernetes) and aim to grow as a technical leader-shaping high-performance data architectures and mentoring multidisciplinary teams.
+                    For a comprehensive list of skills and certifications, please visit my LinkedIn profile.
+                </p>
+            </section>
+
+            <section class="experience mb-8">
+                <h2>Professional Experience</h2>
+
+                <div class="experience-item">
+                    <p class="experience-title">Senior Data Engineer BI & Analytics</p>
+                    <p class="experience-company">SULZER PUMPS, MADRID | Oct 2023 - Present</p>
+                    <ul class="text-gray-700">
+                        <li>Led a major migration from legacy systems to Snowflake + Azure, ensuring scalable, cost-optimized architecture.</li>
+                        <li>Developed automated ETL pipelines using Airflow and dbt; improved refresh reliability and documentation quality.</li>
+                        <li>Built a Streamlit-based app to monitor pipeline health and business KPIs for analytics teams.</li>
+                        <li>Integrated enterprise data from SAP, Salesforce, HVR, and PostgreSQL.</li>
+                        <li>Collaborated with distributed teams in Switzerland, Spain, Finland, and India.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <p class="experience-title">Big Data Engineer</p>
+                    <p class="experience-company">BLUETAB SOLUTIONS SOFTWARE COMPANY, MADRID | Jun 2021 - Oct 2023</p>
+                    <ul class="text-gray-700">
+                        <li><strong>Credit Analysis (Jun 2021 - Feb 2022):</strong> Developed and maintained a large-scale Python ETL process for Santander Bank. Key member of the Critical Care Team (CCT).</li>
+                        <li><strong>Credit Platform Migration (Feb 2022 - Feb 2023):</strong> Led the migration of an outdated Python ETL to a new, more efficient platform, leveraging AWS S3 and Lambda functions. Gained DevOps experience with Red Hat.</li>
+                        <li><strong>Wealth Management Quality Control (Feb 2023 - Oct 2023):</strong> Fully responsible for the development of a Quality Control system, managing client communication and environment creation.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <p class="experience-title">Speaker at PyConES 2022</p>
+                    <p class="experience-company">PYCONES, GRANADA | Oct 2022</p>
+                    <ul class="text-gray-700">
+                        <li>Delivered a talk on detecting fake news using Python, NLP, and AI tools (NLTK, Keras, TensorFlow).</li>
+                        <li>Showcased the use of Recurrent Neural Networks to build an AI model capable of distinguishing between real and fake news.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <p class="experience-title">Software Developer Intern</p>
+                    <p class="experience-company">FACTORIA DE INNOVACIÓN Y DESARROLLOS INFORMÁTICOS SL, SANTA CRUZ DE TENERIFE | Jul 2020 - Sep 2020</p>
+                    <ul class="text-gray-700">
+                        <li>Worked with C, C++, and Python on various software development projects.</li>
+                        <li>Gained valuable experience transitioning from an academic to a professional setting.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <div class="experience-item">
+                    <p class="experience-title">Software Engineering</p>
+                    <p class="experience-company">TECHNOLOGY UNIVERSITY OF ART AND DESIGN (U-TAD), MADRID | Sep 2017 - May 2021</p>
+                </div>
+            </section>
+        </div>
     </div>
-  </div>
 </body>
 </html>
